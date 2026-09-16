@@ -1,11 +1,11 @@
-import questionBank from "./questionaire.js";
+import questionBank from "./GetQues_with_Objects.js";
 
-function displayQuestion(difficulty) {
+function displayQuestion(difficulty){
     const questions = questionBank();
     const selectedQuestions = questions[difficulty];
 
     if (!selectedQuestions){
-        return "InvalidDifficulty";
+        return "Invalid Difficulty";
     }
 
     const randomIndex = Math.floor(
@@ -13,9 +13,6 @@ function displayQuestion(difficulty) {
     );
 
     return selectedQuestions[randomIndex];
-
 }
 
 export default displayQuestion;
-
-

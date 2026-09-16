@@ -3,14 +3,14 @@ import displayQuestion from "../services/GetQuestionaire.js";
 
 const router = express.Router();
 
-router.get("/questions/:difficulty", (req, res) => {
+router.get("/questions/:difficulty",  (req, res) => {
     const difficulty = req.params.difficulty;
 
-    const question = displayQuestion(difficulty);
+    const question = displayQuestion(difficulty)
 
     if (question === "InvalidDifficulty"){
         return res.status(400).json({
-            error: "Invalid difficulty"
+            error: "Invalid Difficulty"
         });
     }
 
@@ -18,7 +18,7 @@ router.get("/questions/:difficulty", (req, res) => {
         difficulty: difficulty,
         question: question,
     });
+
 });
 
-export default router;
- 
+export default router
