@@ -1,5 +1,6 @@
 import questionBank from "./GetQues_with_Objects.js";
 
+
 function displayQuestion(difficulty){
     const questions = questionBank();
     const selectedQuestions = questions[difficulty];
@@ -13,6 +14,8 @@ function displayQuestion(difficulty){
     );
 
     return selectedQuestions[randomIndex];
+
+
 }
 
 export default displayQuestion;
